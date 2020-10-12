@@ -60,8 +60,9 @@ data_stats <- data %>%
               group_by(subject,activity) %>% 
               summarise_all(mean, na.rm=TRUE )
 
-write_csv(data_stats, "data_set.csv")
-              
+write.table(data_stats, "data.txt", row.name=FALSE)  
+
+
 
 
 
